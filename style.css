@@ -1,0 +1,330 @@
+/* ============
+/* Global CSS
+====================== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+.inner {
+    width: 1080px;
+    margin: 0 auto;
+}
+section {
+    padding: 2.5rem 0;
+}
+h1,h2,h3 {
+    padding: 0;
+    margin: 0;
+}
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.title_area {
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, sans-serif;
+    text-align: center;
+    font-size: 16px;
+    line-height: 22px;
+}
+.title_area h2 .h_title {
+    letter-spacing: 5px;
+}
+.title_area h2 .s_title {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* ============
+/* Button
+====================== */
+
+.btn {
+    display: flex;
+    justify-content: center;
+    margin: 35px 0 15px 0;
+}
+.btn button {
+    position: relative;
+    padding: 25px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #56565b;
+    background: linear-gradient(#85B23F, #22652D);
+}
+.btn button a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+}
+.btn button:hover {
+    transform: translateY(5px);
+    letter-spacing: 1.5px;
+}
+.shiny:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny 3s ease-in-out infinite;
+}
+@-webkit-keyframes shiny {
+    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+}
+.btn .arrow:after {
+    /* position: absolute; */
+    content: "\f054";
+    font-family:'Font Awesome 5 Free';
+    font-weight: 900;
+    top: 50%;
+    right: 60px;
+    left: auto; 
+    bottom: auto;
+    transform: translateY(-50%);
+}
+
+
+
+/* =============
+/* header
+========================= */
+header {
+    max-width: 100%;
+}
+header .header_bg {
+    width: 100%;
+    height: 752px;
+    background: url(img/bg_02.jpg) no-repeat top left;
+    background-size: cover;
+}
+header .logo {
+    width: 350px;
+    position: absolute;
+    top: 30px;
+    left: 50px;
+}
+header .logo img {
+    width: 100%;
+    height: auto;
+}
+header .header_title {
+    position: relative;
+    top: 25%;
+    margin-left: 3rem;
+    width: 1050px;
+}
+header .header_bg h1 {
+    width: 100%;
+    height: 550px;
+    text-indent: -9999px;
+    background: url(img/title_06.png) no-repeat;
+    background-size: contain;
+}
+header .header_subtitle {
+    position: relative;
+    margin-left: 4.5rem;
+    top: -100px;
+}
+header .header_subtitle .header_sub01 {
+    background-color: #3699D3;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #68B3DE;
+}
+header .header_subtitle p {
+    margin: 35px 0 25px 0;
+    font-size: 18px;
+}
+header .header_subtitle .header_sub02 {
+    display: inline-block;
+    color: #2883B8;
+    font-size: 26px;
+    border-bottom: 1px solid #68B3DE;
+    font-weight: bold;
+}
+.btn_header {
+    position: relative;
+    top: -110px;
+    display: block;
+    margin-left: 4.5rem;
+}
+
+/* =============
+/* Solutions
+========================= */
+.sec_01 {
+    margin-bottom: 45px;
+}
+.solution {
+    margin-top: 30px;
+}
+.solution_list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.solution_list_item {
+    position: relative;
+    width: 45%;
+    margin: 10px;
+    background-color: #f5f5f5;
+    counter-increment: Num;
+}
+.solution .solution_list_item .solution_img img {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.solution .solution_list_item h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+.solution .solution_list_item .solution_bg {
+    padding: 30px 20px 20px 20px;
+}
+.solution .solution_list_item .solution_bg p {
+    font-size: 13px;
+}
+.solution .solution_list li:after {
+    content: '0' counter(Num);
+    position: absolute;
+    right: 10px;
+    top: 240px;
+    color: #ffb100;
+    font-size: 50px;
+    letter-spacing: -2px;
+    font-weight: 800;
+    z-index: 10;
+}
+
+/* =============
+/* About X-Rite
+========================= */
+.sec_02 {
+    padding: 80px 0;
+    background-color: #F5F3ED;
+}
+.brown_bg {
+    background-color: #fff;
+    padding: 35px;
+}
+.sec_02 .about_txt {
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+.sec_02 .about_txt p {
+    line-height: 1.9;
+    font-size: 16px;
+}
+.sec_02 .gallery_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec_02 .gallery li {
+    width: 50%;
+    margin: 10px;
+}
+.sec_02 .gallery_list img {
+    width: 100%;
+}
+.about_s {
+    color: #f55e31;
+    font-weight: bold;
+    border-bottom: 1px solid #f55e31;
+}
+
+/* =============
+/* Products
+========================= */
+.product {
+    margin-top: 35px;
+}
+.product_list {
+    display: flex;
+    justify-content: center;
+}
+.product_list .product_txt {
+    margin-top: 20px;
+}
+.product_list .product_list_item {
+    width: 31.33%;
+    padding: 20px;
+    background: linear-gradient(#fff, #F9FAEF) ;
+    border: 1px solid #A1AB36;
+    margin: 4.5px;
+    border-radius: 5px;
+}
+.product_list h3 {
+    font-size: 18x;
+    font-weight: 600;
+    text-align: center;
+}
+.product_list p {
+    font-size: 15px;
+    line-height: 1.8;
+}
+.product_list .product_title {
+    display: flex;
+    justify-content: center;
+}
+.product_list .product_title img {
+    width: 75%;
+}
+.product_s {
+    font-size: 14px;
+    border-bottom: 1px solid #BAC445;
+    color: #929B31;
+    font-weight: bold;
+}
+
+/* =============
+/* CTA
+========================= */
+.cta {
+    margin: 0 auto;
+    padding: 30px;
+    font-weight: 600;
+    text-align: center;
+    color: #fb4646;
+    font-size: 18px;
+    line-height: 1.6;
+    background: #fff786;
+    border: 3px solid #fb4646;
+    border-radius: 3px;
+}
+
+/* =============
+/* Footer
+========================= */
+footer {
+    background-color: #ebebeb;
+}
+.footer_txt {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.footer_txt p {
+    margin: 15px;
+    font-size: 14px;
+}
+
