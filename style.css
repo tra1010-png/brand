@@ -53,11 +53,22 @@ ul, li {
 }
 .btn button {
     position: relative;
-    padding: 25px 20px;
-    border-radius: 5px;
+    padding: 25px 60px;
+    border-radius: 40px;
     cursor: pointer;
     border: 1px solid #56565b;
     background: linear-gradient(#85B23F, #22652D);
+}
+.btn .arrow:after {
+    position: absolute;
+    content: "\f054";
+    font-family:'Font Awesome 5 Free';
+    font-weight: 900;
+    top: 50%;
+    right: 25px;
+    left: auto; 
+    bottom: auto;
+    transform: translateY(-50%);
 }
 .btn button a {
     text-decoration: none;
@@ -69,6 +80,17 @@ ul, li {
     transform: translateY(5px);
     letter-spacing: 1.5px;
 }
+.shiny {
+    display: block;
+    position: relative;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+  }
 .shiny:before {
     position: absolute;
     content: '';
@@ -85,17 +107,6 @@ ul, li {
     80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
     81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
     100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
-}
-.btn .arrow:after {
-    /* position: absolute; */
-    content: "\f054";
-    font-family:'Font Awesome 5 Free';
-    font-weight: 900;
-    top: 50%;
-    right: 60px;
-    left: auto; 
-    bottom: auto;
-    transform: translateY(-50%);
 }
 
 
@@ -160,7 +171,7 @@ header .header_subtitle .header_sub02 {
 }
 .btn_header {
     position: relative;
-    top: -110px;
+    top: -100px;
     display: block;
     margin-left: 4.5rem;
 }
