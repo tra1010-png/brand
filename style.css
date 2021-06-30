@@ -212,11 +212,11 @@ header .header_subtitle .header_sub02 {
 .solution .solution_list_item .solution_bg p {
     font-size: 13px;
 }
-.solution .solution_list li:after {
-    content: '0' counter(Num);
+.solution .solution_num {
+    /* content: '0' counter(Num); */
     position: absolute;
     right: 10px;
-    top: 240px;
+    top: 190px;
     color: #ffb100;
     font-size: 50px;
     letter-spacing: -2px;
